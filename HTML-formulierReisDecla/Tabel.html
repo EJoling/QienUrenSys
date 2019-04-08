@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard Trainee | Declaraties</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+<body onload= addRowDeclaratieTabel()>
+	<nav>
+		<a href="index.html"><img id="logo" src="QienLogo.jpg"style="height: 70px;"></a>
+		<div class="nav">
+			<ul>
+				<li><a href="index.html">uitloggen</a></li>
+				<li><a href="dashboard-trainee-declaraties.html" class="active">Declaraties</a></li>
+  				<li><a href="dashboard-trainee.html" >Uren</a></li>
+			</ul>
+		</div>
+	</nav>
+<div class="wrapperDeclaraties">
+	<div class="container">
+		<h1>Declaraties</h1>
+
+		<div id="delcaratieTabelDiv">
+			<table id="declaratieTabel">
+				<tr class="declaratieHeader">
+					<th>Periode</th>
+					<th>Auto km</th>
+					<th>Auto €</th>
+					<th>Openbaar vervoer €</th>
+					<th>Overige kosten €</th>
+					<th>Totaal €</th>
+					<th>Bijlagen</th>
+					
+				</tr>
+				
+				<tr class="declaratiesRow" id="declaratieRow">
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>
+						 
+						<!-- <button class = "bijlageToevoegen" id="bijlagen"> -->
+							<input type="file" id="addBijlage" multiple></input>
+						<!-- </button> -->
+							
+						</td>
+				</tr>
+				<tr>
+					<td colspan=0><button id="addButtonDecla" onclick="addRowDeclaratieTabel()">+</button></td>
+					<td colspan=0><button id="addButton" onclick="declaBerekenen()">Bereken</button></td>
+				</tr>
+			</table>
+
+		</div>
+		<br>
+		<button onclick="verzondenDeclaraties()">Verzenden</button>
+		
+	</div>
+		
+</div>
+
+
+<script type="text/javascript" src="javaScript.js"></script>
+</body>
+</html>

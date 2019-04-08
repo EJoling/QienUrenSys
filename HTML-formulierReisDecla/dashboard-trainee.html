@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard Trainee | Uren</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+<body >
+	<nav>
+		<a href="index.html"><img id="logo" src="img/QienLogo.jpg"style="height: 70px;"></a>
+		<div class="nav">
+			<ul>
+				<li><a href="index.html">uitloggen</a></li>
+				<li><a href="dashboard-trainee-declaraties.html">Declaraties</a></li>
+  				<li><a href="dashboard-trainee.html" class="active">Uren</a></li>
+			</ul>
+		</div>
+	</nav>
+<div class="wrapperUren">
+	<div class="container">
+		<h1>Urentabel</h1>
+		<div><button id="addButton" onclick=" addRowUrenTabel()">+</button></div>
+		<div id="urentabelDiv">
+
+			<table id="urenTabel">
+				<thead>
+				<tr class="UrenHeader">
+				<th><a href="javascript:SortTable(0,'D','dmy');" class="tableheader">Datum</a></th>
+					<th><a href="javascript:SortTable(1,'T');" class="tableheader">Soort</a></th>
+					<th><a href="javascript:SortTable(2,'N');" class="tableheader">Aantal</a></th>
+				</tr>
+				</thead>
+				<tr>
+					</td>
+				</tr>
+				<tbody>
+				<tr class="urenRow" id="UrenRow5">
+					<td>
+						<input type="text" name="datum"></td>
+					<td>
+						<div class="dropdown" >
+							<button  class="dropBtn" >Uren &#9660; </button>
+							<div class="dropdownContent" id="">
+								<ul>
+    								<li>Gewerkte Uren</li>
+   									<li>Overuren 100%</li>
+   									<li>Overuren 125%</li>
+   									<li>Verlof Uren</li>
+   									<li>Ziekte Uren</li>
+   								</ul>
+ 							</div>
+						</div>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				</tbody>
+			</table>
+
+		</div>
+		<button onclick="verzondenUren()">Verzenden</button>
+	</div>
+		
+</div>
+
+
+<script type="text/javascript" src="javaScript.js"></script>
+</body>
+</html>
